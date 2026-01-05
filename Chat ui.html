@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chat UI</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #e5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chat-container {
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Header */
+    .chat-header {
+        background: #4f46e5;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px 10px 0 0;
+    }
+
+    /* Messages */
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background: #f9fafb;
+    }
+
+    .message {
+        max-width: 75%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .received {
+        background: #e0e7ff;
+        align-self: flex-start;
+    }
+
+    .sent {
+        background: #4f46e5;
+        color: white;
+        align-self: flex-end;
+    }
+
+    /* Input */
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .chat-input button {
+        margin-left: 10px;
+        padding: 10px 15px;
+        background: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .chat-input button:hover {
+        background: #4338ca;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        Chat Support
+    </div>
+
+    <div class="chat-body">
+        <div class="message received">Hello! How can I help you?</div>
+        <div class="message sent">I need help with my account.</div>
+        <div class="message received">Sure, please tell me the issue.</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+    </div>
+
+</div>
+
+</body>
+</html>
